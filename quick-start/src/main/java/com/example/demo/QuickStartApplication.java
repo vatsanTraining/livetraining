@@ -19,6 +19,8 @@ public class QuickStartApplication {
 	ConfigurableApplicationContext ctx	=SpringApplication.run(QuickStartApplication.class, args);
 	
 	
+	System.out.println(ctx.getClass().getName());
+	
 	  Customer ram = ctx.getBean("ramesh",Customer.class);
 	  
 	  System.out.println(ram);
