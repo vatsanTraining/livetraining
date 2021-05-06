@@ -2,5 +2,9 @@ logging:
   level:
     '[org.springframework.boot]': trace
     
-spring:  application:    name: true
+spring:  application:    name: autoconfigure
+
+ 
+  
+server:  port: 6060    
     
