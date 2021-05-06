@@ -14,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
-@NoArgsConstructor
 @Slf4j
 public class Customer {
 
@@ -39,10 +38,15 @@ public class Customer {
 	}
 
 	public Customer(int customerId, String customerName, String email) {
-		super();
+		   log.info("Customer Initialized ******************");
 		this.customerId = customerId;
 		this.customerName = customerName;
 		this.email = email;
+	}
+
+	public Customer() {
+		super();
+     log.info("Customer Initialized ******************");
 	}
 
 }
