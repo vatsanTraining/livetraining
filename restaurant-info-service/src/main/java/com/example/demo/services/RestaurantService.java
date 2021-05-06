@@ -25,5 +25,11 @@ public class RestaurantService {
 		return this.repo.findAll();
 	}
 	
+public   RestaurantInfo save(RestaurantInfo entity){
+		
+		return this.repo.save(entity);
+	}
+	
+	
 	
 }
