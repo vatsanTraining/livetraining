@@ -38,4 +38,11 @@ public class Customer {
 		log.info("==========Destroy Method in Customer Called ========");
 	}
 
+	public Customer(int customerId, String customerName, String email) {
+		super();
+		this.customerId = customerId;
+		this.customerName = customerName;
+		this.email = email;
+	}
+
 }
