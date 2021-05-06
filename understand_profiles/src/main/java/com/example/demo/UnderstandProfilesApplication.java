@@ -6,6 +6,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Profile;
+import org.springframework.context.annotation.Scope;
 
 import com.example.demo.model.Customer;
 
@@ -28,6 +29,7 @@ public class UnderstandProfilesApplication {
 	@Bean
 	@Profile(value = "dev")
 	//@Lazy
+	@Scope("prototype")
 	public Customer suresh() {
 		
 		return new Customer(102,"Developer Suresh","sur@abc.com");
