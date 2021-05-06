@@ -1,3 +1,6 @@
 logging:
   level:
     '[org.springframework.boot]': trace
+    
+spring:  application:    name: true
+    
