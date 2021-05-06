@@ -25,22 +25,7 @@ public class ApplicationConfig {
 	}
 	
 	
-	@Bean
-	public Customer suresh() {
-		
-		return new Customer(102,"Suresh","sur@abc.com");
-	}
-	
-	@Bean
-	public Product laptop() {
-		
-		return new Product(102,"dell inspirion");
-	}
 	
 	
-	@Bean
-	public Invoice invoice2() {
-		
-		return new Invoice(suresh(), laptop());
-	}
+	
 }
