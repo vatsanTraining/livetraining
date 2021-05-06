@@ -1,18 +1,28 @@
 package com.example.demo.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import lombok.*;
 import lombok.Data;
 import lombok.experimental.FieldDefaults;
 
 @Data
 @FieldDefaults(level = AccessLevel.PRIVATE)
-@AllArgsConstructor
-@NoArgsConstructor
-
+@Component
 public class Invoice {
 
 	private int invoiceNumber;
 	private Customer customer;
 	private Product product;
+	
+	
+	public Invoice(Customer customer, Product product) {
+		super();
+		this.customer = customer;
+		this.product = product;
+	}
 
+	
+	
 }
