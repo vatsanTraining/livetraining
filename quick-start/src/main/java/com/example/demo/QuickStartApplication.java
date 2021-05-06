@@ -14,14 +14,25 @@ public class QuickStartApplication {
 	ConfigurableApplicationContext ctx	=SpringApplication.run(QuickStartApplication.class, args);
 	
 	
-	  Customer ram = ctx.getBean(Customer.class);
+	  Customer ram = ctx.getBean("ramesh",Customer.class);
 	  
 	  System.out.println(ram);
 	
 	  
-	  Invoice invoice1 = ctx.getBean(Invoice.class);
+//	  Invoice invoice1 = ctx.getBean(Invoice.class);
+//	  
+//	  System.out.println(invoice1);
+//	  
+	  
+Invoice invoice1 = ctx.getBean("invoice",Invoice.class);
 	  
 	  System.out.println(invoice1);
+	  
+	  
+      Invoice invoice2 = ctx.getBean("invoice2",Invoice.class);
+	  
+	  System.out.println(invoice2);
+	  
 	  
 	}
 
