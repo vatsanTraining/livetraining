@@ -34,16 +34,13 @@ public class RestaurantService {
   
   public Optional<RestaurantInfo> getById(int id) {
 	  
-	  
 	  return this.repo.findById(id);
   }
   
 public RestaurantInfo update(RestaurantInfo entity) {
-	  
-	  
+	    
 	  return this.repo.save(entity);
   }
-
 
 public Optional<RestaurantInfo> remove(RestaurantInfo entity) {
 	  
