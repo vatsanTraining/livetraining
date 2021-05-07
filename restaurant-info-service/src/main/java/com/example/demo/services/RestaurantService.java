@@ -1,6 +1,7 @@
 package com.example.demo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.devtools.autoconfigure.DevToolsProperties.Restart;
 import org.springframework.stereotype.Service;
 import java.util.*;
 
@@ -25,10 +26,41 @@ public class RestaurantService {
 		return this.repo.findAll();
 	}
 	
-public   RestaurantInfo save(RestaurantInfo entity){
+  public RestaurantInfo save(RestaurantInfo entity){
 		
 		return this.repo.save(entity);
 	}
+  
+  
+  public Optional<RestaurantInfo> getById(int id) {
+	  
+	  
+	  return this.repo.findById(id);
+  }
+  
+public RestaurantInfo update(RestaurantInfo entity) {
+	  
+	  
+	  return this.repo.save(entity);
+  }
+
+
+public Optional<RestaurantInfo> remove(RestaurantInfo entity) {
+	  
+	Optional<RestaurantInfo> optional = Optional.empty();  
+	
+	 if(this.repo.existsById(entity.getId())) {
+		 
+		 this.repo.delete(entity);
+		 optional = Optional.of(entity);
+	 }
+	  
+	 return optional;
+}
+
+
+
+  
 	
 	
 	
