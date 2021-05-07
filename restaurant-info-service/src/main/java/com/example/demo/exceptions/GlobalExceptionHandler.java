@@ -16,6 +16,7 @@ public class GlobalExceptionHandler {
 	public ErrrorHandler  handleAllExceptions(Exception e, WebRequest request) {
 		
 		
+		
 		return new ErrrorHandler(LocalDateTime.now(),e.getMessage(),request.getDescription(false));
 		
 	}
