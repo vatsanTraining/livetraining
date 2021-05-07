@@ -37,9 +37,9 @@ public class ReservationController {
 			   }
 		}
 		
-		Link  links =WebMvcLinkBuilder.linkTo(ReservationController.class).withSelfRel();
+		Link  link =WebMvcLinkBuilder.linkTo(ReservationController.class).withSelfRel();
 		
-		return CollectionModel.of(list,links);
+		return CollectionModel.of(list,link);
 		
 		
 	}
