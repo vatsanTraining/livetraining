@@ -15,6 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.RestaurantInfo;
 import com.example.demo.services.RestaurantService;
+
+import io.swagger.v3.oas.annotations.Operation;
+
 import java.util.*;
 @RestController
 @RequestMapping(path = "/api/v1")
@@ -31,12 +34,15 @@ public class RestaurantController {
 	
 	
 	@GetMapping(path = "/restaurants")
+	@Operation(description =  "Used to Find All the Restaurants")
 	public List<RestaurantInfo> findAll(){
 		
 		return this.service.getAll();
 	}
 	
 	@GetMapping(path = "/restaurants/{id}")
+	@Operation(description =  "Used to Find Restaurants by Unique Id")
+
 	public RestaurantInfo findById(@PathVariable("id") int id){
 		
 		return this.service.getById(id)
@@ -45,6 +51,8 @@ public class RestaurantController {
 	}
 	
 	@GetMapping(path = "/restaurants/srch/{name}")
+	@Operation(description =  "Used to Find Restaurants by its Name")
+
 	public RestaurantInfo findByName(@PathVariable("name") String srchName){
 		
 		return this.service.searchByName(srchName);
