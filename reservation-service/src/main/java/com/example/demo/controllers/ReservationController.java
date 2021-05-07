@@ -33,6 +33,7 @@ public class ReservationController {
 				   		   
 				   Link selfLink = WebMvcLinkBuilder.linkTo(CustomerController.class)
 						      .slash("customers/"+eachCustomer.getId()).withSelfRel();
+				   
 				   eachReservation.add(selfLink);
 			   }
 		}

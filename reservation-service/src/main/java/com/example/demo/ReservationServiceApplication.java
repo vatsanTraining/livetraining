@@ -33,12 +33,12 @@ public class ReservationServiceApplication {
 			@Override
 			public void run(String... args) throws Exception {
 				
-				Customer ram = new Customer(101,"Ramesh",4848484);
-				Customer shyam = new Customer(102,"Shyam",7848732);
+				Customer rahul = new Customer(105,"Rahul",2848484);
+				Customer vikas = new Customer(107,"vikas",3848732);
 				
-				List<Customer> custList = Arrays.asList(ram,shyam);
+				List<Customer> custList = Arrays.asList(rahul,vikas);
 				
-				Reservation resDay1 = new Reservation(101L,LocalDateTime.now(), custList);
+				Reservation resDay1 = new Reservation(1012L,LocalDateTime.now(), custList);
 				
 				repo.save(resDay1);
 				
