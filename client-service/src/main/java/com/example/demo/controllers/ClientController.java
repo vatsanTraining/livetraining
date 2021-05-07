@@ -37,7 +37,7 @@ public class ClientController {
 		
 		return this.client.post()
 				.uri("http://localhost:7075/api/v1/restaurants")
-				 .body(dto,RestaurantDTO.class).retrieve().bodyToMono(RestaurantDTO.class);
+				 .body(Mono.just(dto),RestaurantDTO.class).retrieve().bodyToMono(RestaurantDTO.class);
 		
 	}
 }
