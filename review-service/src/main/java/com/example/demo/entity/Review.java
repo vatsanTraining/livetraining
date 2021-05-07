@@ -25,6 +25,6 @@ public class Review {
 	String reviewedBy;
 	String reviewAspect;
 	String reviewBody;
-	int reviewRating;
+	double reviewRating;
 
 }
