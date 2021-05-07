@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -43,6 +44,13 @@ public class RestaurantController {
 	
 	}
 	
+	@GetMapping(path = "/restaurants/srch/{name}")
+	public RestaurantInfo findByName(@PathVariable("name") String srchName){
+		
+		return this.service.searchByName(srchName);
+	
+	}
+	
 	
 	@PostMapping(path = "/restaurants")
 	public ResponseEntity<RestaurantInfo> addInfo(@RequestBody RestaurantInfo entity){
@@ -59,6 +67,14 @@ public class RestaurantController {
 		
 		return ResponseEntity.status(HttpStatus.OK).body(added);
 	}
+	
+	@PatchMapping(path = "/restaurants/update/{id}/{newTiming}")
+	public ResponseEntity<String> updateTiming(@PathVariable("id") int id,@PathVariable("newTiming") String newTiming){
+	
+		  int count = this.service.updateTiming(id, newTiming);
+		  
+		  return ResponseEntity.ok("Rows Updated :="+count);
+		}
 	
 	@DeleteMapping(path = "/restaurants")
 	public RestaurantInfo remove(@RequestBody RestaurantInfo entity){
