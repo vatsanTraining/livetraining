@@ -2,9 +2,12 @@ package com.example.demo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.Link;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.entity.Customer;
 import com.example.demo.entity.Reservation;
 import com.example.demo.repo.ReservationRepository;
 import java.util.*;
@@ -22,8 +25,22 @@ public class ReservationController {
 		
 		List<Reservation> list = this.repo.findAll();
 		
+		for(Reservation eachReservation: list) {
+			
+			List<Customer> custList = eachReservation.getCustomerList();
+			
+			   for(Customer eachCustomer: custList) {
+				   		   
+				   Link selfLink = WebMvcLinkBuilder.linkTo(CustomerController.class)
+						      .slash("customers/"+eachCustomer.getId()).withSelfRel();
+				   eachReservation.add(selfLink);
+			   }
+		}
 		
-		return null;
+		Link  links =WebMvcLinkBuilder.linkTo(ReservationController.class).withSelfRel();
+		
+		return CollectionModel.of(list,links);
+		
 		
 	}
 }
