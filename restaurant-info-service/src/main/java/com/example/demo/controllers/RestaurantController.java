@@ -17,10 +17,12 @@ import com.example.demo.entity.RestaurantInfo;
 import com.example.demo.services.RestaurantService;
 
 import io.swagger.v3.oas.annotations.Operation;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 @RestController
 @RequestMapping(path = "/api/v1")
+@Slf4j
 public class RestaurantController {
 
 	
@@ -36,7 +38,7 @@ public class RestaurantController {
 	@GetMapping(path = "/restaurants")
 	@Operation(description =  "Used to Find All the Restaurants")
 	public List<RestaurantInfo> findAll(){
-		
+		log.debug("Find all Method called");
 		return this.service.getAll();
 	}
 	
