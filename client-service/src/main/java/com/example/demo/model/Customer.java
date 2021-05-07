@@ -1,5 +1,4 @@
-package com.example.demo.controllers;
-
+package com.example.demo.model;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -12,10 +11,11 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor()
 @NoArgsConstructor
 
-public class ReviewsDTO {
-	String reviewedBy;
-	String reviewAspect;
-	String reviewBody;
-	double reviewRating;
 
+public class Customer{
+
+	 
+	 private int id;
+	 private String customerName;
+	 private long mobileNumber;
 }

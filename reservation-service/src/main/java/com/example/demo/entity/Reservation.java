@@ -33,6 +33,7 @@ public class Reservation extends RepresentationModel<Reservation>{
 
 	@Id
 	private Long id;
+	private String restaurantName;
 	private LocalDateTime reservationDate;
 	
 	@OneToMany(targetEntity =Customer.class,  

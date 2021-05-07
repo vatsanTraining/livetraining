@@ -13,10 +13,10 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor()
 @NoArgsConstructor
 
-public class Info {
+public class ReviewInfo {
 
-	ReviewsDTO  review;
-	RestaurantDTO restaurant;
 	
+	RestaurantDTO restaurant;
+	ReviewsDTO  review;
 	
 }
