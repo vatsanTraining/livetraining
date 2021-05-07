@@ -14,7 +14,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 public class ErrrorHandler {
 
-	LocalDateTime now;
+	LocalDateTime time;
 	String message;
 	String description;
 	
