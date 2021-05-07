@@ -15,7 +15,7 @@ public interface RestaurantInfoRepository extends JpaRepository<RestaurantInfo, 
 
 	public RestaurantInfo findByName(String srchName);
 	
-	@Query("update RestaurantInfo set openingHours=:newValue where id=:srchId")
+	@Query(value="update RestaurantInfo set openingHours=:newValue where id=:srchId")
 	@Modifying
 	@Transactional
 	public int updateOpeningHours(@Param("srchId") int id,@Param("newValue") String valueToChange);

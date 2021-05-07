@@ -56,8 +56,16 @@ public Optional<RestaurantInfo> remove(RestaurantInfo entity) {
 }
 
 
-
+public RestaurantInfo searchByName(String srchName) {
+	
+	return this.repo.findByName(srchName);
+}
   
+
+public int  updateTiming(int id, String newTiming) {
+	
+	return this.repo.updateOpeningHours(id, newTiming);
+}
 	
 	
 	
