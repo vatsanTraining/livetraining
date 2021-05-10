@@ -2,8 +2,29 @@ server:
   port: 3030
   
 spring:  application:    name: account-service
-    
+  config:    activate:      on-profile:      - dev
 
 eureka:  client:    fetch-registry: true
     register-with-eureka: true
-    service-url:      defaultZone: http://localhost:8761/eureka      
+    service-url:      defaultZone: http://localhost:8761/eureka   
+      
+---
+server:
+  port: 3035
+  
+spring:
+  application:
+    name: account-service
+  config:
+    activate:
+      on-profile:
+      - prod
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka   
+         
