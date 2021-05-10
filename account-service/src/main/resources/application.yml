@@ -1,0 +1,8 @@
+server:
+  port: 3030
+  
+spring:
+  application:
+    name: account-service
+  config:
+    import: configserver:http://localhost:8888    
