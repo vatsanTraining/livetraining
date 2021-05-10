@@ -21,11 +21,8 @@ public class AccountController {
 	@GetMapping(path = "/accounts")
 	public Account getAccountInfo() {
 		
-		account.setAccountHolderName("Ramesh");
-		account.setId(1010);
-		account.setOutstanding(45000);
-		account.setPortNumber(portNumber);
-		
+			account.setPortNumber(portNumber);
+			
 		return account;
 	}
 }
