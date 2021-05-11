@@ -21,7 +21,8 @@ public class DocumentationEndpoint {
 	
 	@WriteOperation
 	public String updateInfo(@Selector String author) {
-	   return versionInfo.concat(author);
+	   this.versionInfo = this.versionInfo.concat(author);
+	   return this.versionInfo;
 	  }
 
 	
