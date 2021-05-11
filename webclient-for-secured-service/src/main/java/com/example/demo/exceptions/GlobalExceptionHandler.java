@@ -15,9 +15,9 @@ public class GlobalExceptionHandler {
 
 	
 	@ExceptionHandler(WebClientResponseException.class)
-	public ResponseEntity<String> handleWebClientResponseException(
-		      WebClientResponseException ex) {
-		 
+	public ResponseEntity<String> handleException(WebClientResponseException ex) {
+		
+		
 		return ResponseEntity.status(ex.getRawStatusCode())
 		  .body(ex.getResponseBodyAsString());
 
