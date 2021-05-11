@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import javax.annotation.security.RolesAllowed;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,12 +25,14 @@ public class OrderController {
 	
 	
 	@GetMapping(path = "/orders")
+	@RolesAllowed(value = {"ROLE_ADMIN","ROLE_USER"})
 	public Order getOrder() {
 		
 		return firstOrder;
 	}
 	
 	@GetMapping(path = "/orders/{id}")
+	@RolesAllowed(value = {"ROLE_ADMIN"})
 	public Order getOrderById(@PathVariable("id") int id) {
 		
 		return secondOrder;
