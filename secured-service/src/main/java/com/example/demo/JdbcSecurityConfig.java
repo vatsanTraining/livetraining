@@ -31,7 +31,7 @@ public class JdbcSecurityConfig extends WebSecurityConfigurerAdapter {
                 "WHERE u.username = ? " +
                 "AND u.username = a.username"
             )
-        .passwordEncoder(new BCryptPasswordEncoder());
+        .passwordEncoder(encoder());
 
 	
 	}
