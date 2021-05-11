@@ -15,9 +15,9 @@ public class EurekaRegistryApplication {
 	public static void main(String[] args) {
 		ConfigurableApplicationContext ctx =SpringApplication.run(EurekaRegistryApplication.class, args);
 		
-//		System.out.println(ctx.getBean(EurekaInstanceConfig.class));
-//		System.out.println(ctx.getBean(EurekaServerConfig.class));
-//		
+		System.out.println(ctx.getBean(EurekaInstanceConfig.class));
+		System.out.println(ctx.getBean(EurekaServerConfig.class));
+		
 	}
 
 }

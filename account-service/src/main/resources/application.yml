@@ -1,3 +1,13 @@
+info:
+  author: Srivatsan
+  build:
+    artificatId: '@project.artifact@'
+    groupId: '@project.groupId@'
+    version: '@project.version@'
+  java:
+      version:@java.version@
+ 
+
 server:
   port: 3030
   
@@ -9,4 +19,6 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-peer2:8770/eureka           
+      defaultZone: http://localhost:8761/eureka           
+
+management:  endpoints:    web:      exposure:        include:        - "*"
