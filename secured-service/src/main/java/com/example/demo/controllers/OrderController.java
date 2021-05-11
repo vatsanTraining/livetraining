@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import java.security.Principal;
+
 import javax.annotation.security.RolesAllowed;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,14 +28,16 @@ public class OrderController {
 	
 	@GetMapping(path = "/orders")
 	@RolesAllowed(value = {"ROLE_ADMIN","ROLE_USER"})
-	public Order getOrder() {
+	public Order getOrder(Principal principal) {
 		
+		System.out.println("====Principal ========"+principal.getName());
 		return firstOrder;
 	}
 	
 	@GetMapping(path = "/orders/{id}")
 	@RolesAllowed(value = {"ROLE_ADMIN"})
-	public Order getOrderById(@PathVariable("id") int id) {
+	public Order getOrderById(@PathVariable("id") int id,Principal principal) {
+		System.out.println("====Principal ========"+principal.getName());
 		
 		return secondOrder;
 	}
