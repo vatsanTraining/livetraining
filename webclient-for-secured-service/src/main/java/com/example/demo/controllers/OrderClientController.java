@@ -23,10 +23,10 @@ public class OrderClientController {
 	public Mono<String> getOrder() {
 		
 		return client.get().uri("http://localhost:6565/orders")
-				.headers(header -> header.setBasicAuth("india","india"))
+				.headers(header -> header.setBasicAuth("nepal","nepal"))
 				 .retrieve().onStatus(HttpStatus::is5xxServerError, 
 						  clientResponse ->
-			        Mono.error(new RuntimeException()))
+			        Mono.error(new RuntimeException("User Not Authenticated")))
 			        .bodyToMono(String.class);
 
 		
