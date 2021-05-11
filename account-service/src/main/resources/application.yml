@@ -6,3 +6,7 @@ spring:
     name: account-service
   config:
     import: configserver:http://localhost:8888    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-peer2:8770/eureka           
