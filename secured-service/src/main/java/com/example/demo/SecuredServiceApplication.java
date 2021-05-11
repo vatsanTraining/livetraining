@@ -23,4 +23,9 @@ public class SecuredServiceApplication {
 	}
 	
 	
+	@Bean
+	public Order secondOrder() {
+		
+		return new Order(102,"completed",LocalDateTime.now());
+	}
 }
