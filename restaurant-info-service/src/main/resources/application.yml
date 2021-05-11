@@ -12,7 +12,7 @@ spring:
       ddl-auto: update
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-    show-sql: true    
+    show-sql: true      boot:    admin:      client:        url:        - http://localhost:9494
     
  
 server:
@@ -26,4 +26,17 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka
-  
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+  endpoint:
+    health:
+      show-details: always
+      
+    shutdown:
+      enabled: true    
+      
