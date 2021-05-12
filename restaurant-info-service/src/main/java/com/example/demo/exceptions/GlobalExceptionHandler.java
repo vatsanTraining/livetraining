@@ -18,7 +18,7 @@ public class GlobalExceptionHandler {
 	@ExceptionHandler(Exception.class)
 	public ErrrorHandler  handleAllExceptions(Exception e, WebRequest request) {
 		
-		log.debug("Exception :="+ e.getMessage());
+		log.info("Exception :="+ e.getMessage());
 		
 		return new ErrrorHandler(LocalDateTime.now(),e.getMessage(),request.getDescription(false));
 		

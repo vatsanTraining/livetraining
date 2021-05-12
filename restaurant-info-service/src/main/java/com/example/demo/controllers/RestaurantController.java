@@ -38,7 +38,7 @@ public class RestaurantController {
 	@GetMapping(path = "/restaurants")
 	@Operation(description =  "Used to Find All the Restaurants")
 	public List<RestaurantInfo> findAll(){
-		log.debug("Find all Method called");
+		log.info("Find all Method called");
 		return this.service.getAll();
 	}
 	
@@ -47,6 +47,7 @@ public class RestaurantController {
 
 	public RestaurantInfo findById(@PathVariable("id") int id){
 		
+		log.info("Find By Id Called");
 		return this.service.getById(id)
 				   .orElseThrow(()-> new RuntimeException("Element with Given Id Not found"));
 	
