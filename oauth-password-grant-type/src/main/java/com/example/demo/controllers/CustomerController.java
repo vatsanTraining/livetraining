@@ -1,5 +1,7 @@
 package com.example.demo.controllers;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,8 +21,9 @@ public class CustomerController {
 	
 	
 	@GetMapping(path = "/api/v1/customers")
-	public Customer getCustomer() {
+	public Customer getCustomer(Principal principal) {
 		
+		System.out.println("==========="+principal.getName());
 		
 		return this.customer;
 	}
