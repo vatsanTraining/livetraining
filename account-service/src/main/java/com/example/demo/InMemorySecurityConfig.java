@@ -15,13 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class InMemorySecurityConfig extends WebSecurityConfigurerAdapter {
 
 	
-	@Bean
-	public PasswordEncoder encoder() {
 		
-		return new BCryptPasswordEncoder();
-	}
-	
-	
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
