@@ -35,7 +35,7 @@ public class AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 		      .secret(encoder.encode("pass123"))
 		         .authorizedGrantTypes("password")
 		            .scopes("read","write")
-		               .redirectUris("http://localhost:8585/login/code/ourclient");
+		               .redirectUris("http://localhost:8585/login/");
 		 
 	
 	}
