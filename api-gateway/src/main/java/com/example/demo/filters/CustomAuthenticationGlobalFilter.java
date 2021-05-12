@@ -16,7 +16,9 @@ public class CustomAuthenticationGlobalFilter implements GlobalFilter {
 
 		
 		  	  
-		boolean isPresent =  exchange.getRequest().getURI().getPath().contains("api");
+		//boolean isPresent =  exchange.getRequest().getURI().getPath().contains("api");
+		
+		boolean isPresent =  exchange.getRequest().getURI().getPath().contains("pkl");
 		
 		if(isPresent) {
 			
