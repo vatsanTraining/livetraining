@@ -7,13 +7,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 
 import reactor.core.publisher.Mono;
-
+import java.util.*;
 @Component
 public class CustomAuthenticationGlobalFilter implements GlobalFilter {
 
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
+		
+		  	  
 		boolean isPresent =  exchange.getRequest().getURI().getPath().contains("api");
 		
 		if(isPresent) {
