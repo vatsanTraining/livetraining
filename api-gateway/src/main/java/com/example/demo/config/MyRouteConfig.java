@@ -13,7 +13,7 @@ public class MyRouteConfig {
 	    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
 	    
 	         return builder.routes()
-	           .route(p -> p.path("/api/v1/restaunts/**")
+	           .route(p -> p.path("/api/v1/restaurants/**")
 	           .uri("lb://RESTAURANT-INFO-SERVICE") )
 	                .route(p -> p.path("/accounts/**")
 	                .uri("lb://ACCOUNT-SERVICE"))
