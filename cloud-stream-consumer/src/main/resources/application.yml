@@ -1,0 +1,12 @@
+server:
+  port: 7575
+  
+  
+spring:
+  cloud:
+    stream:
+      bindings:
+         highValue:
+           destination: premium
+         normalValue:
+           destination: normal    
