@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    bus:
+      enabled: true
+  kafka:    bootstrap-servers:    - ${KAFKA_ADDR:http://localhost:9092}
+      config:    import: configserver:http://localhost:8888
+    
+management:  endpoints:    web:      exposure:        include:        - "*"    
+    
+server:  port: 6060
+  
+       
