@@ -5,11 +5,13 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import io.netty.handler.codec.Headers;
+import com.example.demo.filters.CustomAuthenticationGlobalFilter;
+
 
 @Configuration
 public class MyRouteConfig {
 
+	
 	
 	  @Bean
 	    public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
@@ -21,5 +23,6 @@ public class MyRouteConfig {
 	                .uri("lb://ACCOUNT-SERVICE"))
 	                .build();
 	}
+
 
 }
