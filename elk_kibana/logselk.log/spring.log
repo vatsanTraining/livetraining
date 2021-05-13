@@ -1,0 +1,35 @@
+2021-04-25 14:32:36.687  INFO 9720 --- [main] com.example.demo.ElkKibanaApplication    : Starting ElkKibanaApplication using Java 11.0.9 on DESKTOP-76QJGKM with PID 9720 (E:\training\training_workspaces\Spring_Synechron_april_2021\elk_kibana\target\classes started by vatsa in E:\training\training_workspaces\Spring_Synechron_april_2021\elk_kibana)
+2021-04-25 14:32:36.690  INFO 9720 --- [main] com.example.demo.ElkKibanaApplication    : No active profile set, falling back to default profiles: default
+2021-04-25 14:32:37.871  INFO 9720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-25 14:32:37.885  INFO 9720 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 14:32:37.886  INFO 9720 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-25 14:32:38.001  INFO 9720 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 14:32:38.002  INFO 9720 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1256 ms
+2021-04-25 14:32:38.272  INFO 9720 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 14:32:38.622  INFO 9720 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-25 14:32:38.640  INFO 9720 --- [main] com.example.demo.ElkKibanaApplication    : Started ElkKibanaApplication in 2.398 seconds (JVM running for 3.5)
+2021-04-25 14:33:03.866  INFO 9720 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 14:33:03.868  INFO 9720 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 14:33:03.873  INFO 9720 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-04-25 14:33:21.166  INFO 9720 --- [http-nio-8080-exec-4] com.example.demo.ElkController           : Calling ElK Controller Home Method
+2021-04-25 14:33:29.222  INFO 9720 --- [http-nio-8080-exec-10] com.example.demo.ElkController           : Less than 5 condition called
+2021-04-25 14:33:32.248  INFO 9720 --- [http-nio-8080-exec-2] com.example.demo.ElkController           : Greater than 5 called
+2021-04-25 14:34:51.249  INFO 9720 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-04-25 14:34:51.556  INFO 9720 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-25 14:36:47.254  INFO 26280 --- [main] com.example.demo.ElkKibanaApplication    : Starting ElkKibanaApplication using Java 11.0.9 on DESKTOP-76QJGKM with PID 26280 (E:\training\training_workspaces\Spring_Synechron_april_2021\elk_kibana\target\classes started by vatsa in E:\training\training_workspaces\Spring_Synechron_april_2021\elk_kibana)
+2021-04-25 14:36:47.259  INFO 26280 --- [main] com.example.demo.ElkKibanaApplication    : No active profile set, falling back to default profiles: default
+2021-04-25 14:36:48.799  INFO 26280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-04-25 14:36:48.812  INFO 26280 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-25 14:36:48.813  INFO 26280 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.44]
+2021-04-25 14:36:48.907  INFO 26280 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-25 14:36:48.907  INFO 26280 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1569 ms
+2021-04-25 14:36:49.105  INFO 26280 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-25 14:36:49.369  INFO 26280 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-04-25 14:36:49.380  INFO 26280 --- [main] com.example.demo.ElkKibanaApplication    : Started ElkKibanaApplication in 2.902 seconds (JVM running for 5.021)
+2021-04-25 14:36:59.795  INFO 26280 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-25 14:36:59.797  INFO 26280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-04-25 14:36:59.798  INFO 26280 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-04-25 14:36:59.849  INFO 26280 --- [http-nio-8080-exec-1] com.example.demo.ElkController           : Less than 5 condition called
+2021-04-25 14:37:03.118  INFO 26280 --- [http-nio-8080-exec-5] com.example.demo.ElkController           : Greater than 5 called
+2021-04-25 14:37:42.957  INFO 26280 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-04-25 14:37:43.329  INFO 26280 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

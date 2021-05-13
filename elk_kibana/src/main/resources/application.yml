@@ -1,0 +1,3 @@
+logging:
+  file:
+    name: e://logs//elk-service.log
