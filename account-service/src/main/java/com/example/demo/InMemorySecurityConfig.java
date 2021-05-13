@@ -25,7 +25,23 @@ public class InMemorySecurityConfig extends WebSecurityConfigurerAdapter {
 	
 	}
 
+	@Autowired
+	PasswordEncoder encoder;
 	
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+
+		
+		auth.inMemoryAuthentication()
+		       .withUser("india").password(encoder.encode("india")).roles("ADMIN")
+		        .and().withUser("chennai").password(encoder.encode("chennai")).roles("USER");
+	}
+
 	
+	@Bean
+	public BCryptPasswordEncoder encoder() {
+		
+		return new BCryptPasswordEncoder();
+	}
 	
 }
