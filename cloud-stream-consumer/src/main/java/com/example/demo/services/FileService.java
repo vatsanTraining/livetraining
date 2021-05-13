@@ -1,12 +1,13 @@
 package com.example.demo.services;
 
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class FileService {
 
 	public void save(String fileName, String order) {

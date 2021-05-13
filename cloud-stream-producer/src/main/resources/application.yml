@@ -11,3 +11,5 @@ spring:
            destination: premium
          normalValue:
            destination: normal    
+           
+           

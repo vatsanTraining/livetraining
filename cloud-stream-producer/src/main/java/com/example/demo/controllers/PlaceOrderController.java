@@ -16,8 +16,6 @@ import com.example.demo.services.OrderService;
 public class PlaceOrderController {
 
 	
-	
-	
 	@Autowired
 	private OrderService service;
 	
